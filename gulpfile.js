@@ -1,7 +1,7 @@
 // variáveis
 const gulp = require("gulp");
 const imagemin = require("gulp-imagemin");
-const sass = require("sass")(require("gulp-sass"));
+const sass = require('gulp-sass')(require('sass'));
 
 // fim variáveis
 
@@ -27,7 +27,7 @@ exports.default = gulp.parallel(compila_sass, comprime_imagens);
 //fim export
 
 // observando gulp
-exports.wacth = function () {
+exports.watch = function () {
   gulp.watch("./src/styles/*scss", gulp.parallel(compila_sass));
 };
 // fim obsrevação

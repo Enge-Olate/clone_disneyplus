@@ -1,20 +1,28 @@
 {
   "name": "clone_disneyplus",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Este projeto é um clone da interface do Disney+, desenvolvido para fins educacionais. Ele simula a experiência de navegação e visualização de conteúdos da plataforma original.",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enge-Olate/clone_disneyplus.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Enge-Olate/clone_disneyplus/issues"
+  },
+  "homepage": "https://github.com/Enge-Olate/clone_disneyplus#readme",
   "devDependencies": {
     "gulp": "^5.0.1",
-    "gulp-imagemin": "^6.2.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^6.0.1",
+    "gulp-uglify": "^3.0.2",
     "sass": "^1.89.2"
   }
 }

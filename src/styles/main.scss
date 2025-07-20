@@ -1,4 +1,5 @@
 // use
+@use "sass:color";
 @use 'hero';
 @use 'reset';
 @use 'variaveis';
@@ -74,7 +75,7 @@ body{
     border: 1px solid  variaveis.$corDeFundoBotaoPrimario;
 
     &:hover {
-        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
+        background-color: color.adjust(variaveis.$corDeFundoBotaoPrimario, $lightness: 3%);
     }
 
     &--secondary {
@@ -82,7 +83,7 @@ body{
         border-color: variaveis.$corDeFundoBotaoSecundario;
 
         &:hover {
-            background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+            background-color: color.adjust(variaveis.$corDeFundoBotaoSecundario, $lightness: 3%);
         }
     }
 

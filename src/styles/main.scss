@@ -1,7 +1,98 @@
-//varráveis
-$cor-pagina:red;
-//fim variáveis
+// use
+@use 'hero';
+@use 'reset';
+@use 'variaveis';
+@use 'header';
+// fim use
 
+
+
+// corpo da página
 body{
-    background-color: $cor-pagina;
+    background-color: variaveis.$corDeFundo;
 }
+// fim body
+
+//mixins
+@mixin text($fontSize:16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoPrincipal;
+}
+
+//fim mixins
+
+//text
+.text--small{
+    @include text;
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text{
+    @include text(18px);
+}
+//fim text
+//title
+.title--small{
+    @include title(28px);
+    color: variaveis.$corTextoSecundario
+}
+.title--big{
+    @include text(44px);
+}
+
+//fim title
+//links
+.link--text{
+    @include text(20px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline;
+    
+}
+//fim links
+
+//button
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid  variaveis.$corDeFundoBotaoPrimario;
+
+    &:hover {
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
+    }
+
+    &--secondary {
+        background-color: variaveis.$corDeFundoBotaoSecundario;
+        border-color: variaveis.$corDeFundoBotaoSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
+}
+//fim button

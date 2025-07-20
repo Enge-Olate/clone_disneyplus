@@ -1,5 +1,5 @@
 // use
-@use "sass:color";
+@use 'plans';
 @use 'hero';
 @use 'reset';
 @use 'variaveis';
@@ -29,6 +29,10 @@ body{
 //fim mixins
 
 //text
+.text--big{
+    @include text(18px);
+    color: variaveis.$corTextoPrincipal;
+}
 .text--small{
     @include text;
     color: variaveis.$corTextoPrincipal;

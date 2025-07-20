@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/dist/styles/main.css">
     <title>Disney+</title>
 </head>
+
 <body>
     <header class="header header--is-hidden">
         <div class="header__container">
@@ -31,13 +33,13 @@
             <h3 class="title--small">
                 As melhores histórias em um só lugar.
             </h3>
-            
+
             <p>
                 <a class="link--text" href="#">
                     Assinar o Disney+
                 </a>
                 <br>
-                
+
                 <span class="text">R$ 27,90/mês o R$ 279,90/ano à vista*</span>
             </p>
             <ul class="hero__content__combos">
@@ -47,7 +49,8 @@
                     <span class="text">R$ 45,90/mês*</span>
                 </li>
                 <li class="hero__content__combos__combo">
-                    <img src="/src/imagens/images/logos/disney_star_plus_starzplay_underline.png" alt="Disney+ - Star+ - Combo+">
+                    <img src="/src/imagens/images/logos/disney_star_plus_starzplay_underline.png"
+                        alt="Disney+ - Star+ - Combo+">
                     <button class="button">Assine Agora</button>
                     <span class="text">R$ 45,90/mês*</span>
                 </li>
@@ -57,7 +60,7 @@
             </p>
         </div>
     </section>
-      <section class="shows">
+    <section class="shows">
         <nav class="shows__tabs">
             <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">
                 Em breve
@@ -85,7 +88,7 @@
             <li class="shows__list__item">
                 <img src="/src/imagens/images/em_breve/willow.jpg" alt="wilow">
             </li>
-            
+
         </ul>
         <ul data-tab-id="populares" class="shows__list">
             <li class="shows__list__item">
@@ -127,6 +130,40 @@
                 <img src="/src/imagens/images/mais_no_star_plus/the_kardashians.jpg" alt="the_kardashians">
             </li>
         </ul>
-        <script src="/dist/script_min/index.js"></script>
+    </section>
+     <section class="plans">
+        <h2 class="title--big">Escolha seu plano</h2>
+        <ul class="plans__list">
+            <li class="plans__list__item">
+                <img src="/src/imagens/images/logos/disney_star_plus.png" alt="Disney+">
+                <strong class="title--small">R$ 27,90/mês*</strong>
+                <p class="text--big">
+                    No Disney+ você encontra as últimas estreias do cinema, originais e clássicos inesquecíveis.
+                </p>
+                <button class="button">Assine agora</button>
+            </li>
+            <li class="plans__list__item">
+                <img src="/src/imagens/images/logos/disney_star_plus_sm.png" alt="Disney+">
+                <strong class="title--small">R$ 45,90/mês*</strong>
+                <p class="text--big">
+                    Assine Disney+ e Star+ juntos. Economize e aproveite agora os dois serviços por um preço único.
+                </p>
+                <button class="button">Assine agora</button>
+            </li>
+            <li class="plans__list__item">
+                <img src="/src/imagens/images/logos/disney_star_plus_starzplay_underline.png" alt="Disney+">
+                <strong class="title--small">R$ 55,90/mês*</strong>
+                <p class="text--big">
+                    Disney+, Star+ e STARZPLAY em um plano especial. Assine agora os três serviços juntos.
+                </p>
+                <button class="button">Assine agora</button>
+            </li>
+        </ul>
+        <p class="text--small">
+            *O preço pode variar caso a assinatura seja feita através de outras plataformas.
+        </p>
+    </section>
+    <script src="/dist/script_min/index.js"></script>
 </body>
+
 </html>

@@ -44,5 +44,6 @@ export default gulp.parallel(comprime_imagens, compila_sass, comprime_js);
 // observando
 export const watch = () => {
     gulp.watch('./src/styles/*.scss', gulp.parallel(compila_sass));
+    gulp.watch('./src/scripts/*.js', gulp.parallel(comprime_js));
 };
 // fim observando

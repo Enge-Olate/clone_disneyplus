@@ -5,6 +5,7 @@
 @use 'header';
 @use 'shows';
 @use 'plans';
+@use 'sass:color';
 // fim use
 
 
@@ -45,7 +46,7 @@ body{
 //title
 .title--small{
     @include title(28px);
-    color: variaveis.$corTextoSecundario
+    color: variaveis.$corTextoSecundario;
 }
 .title--big{
     @include text(44px);
@@ -92,7 +93,7 @@ body{
     }
 
     &--dark {
-        background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+        background-color: color.change(variaveis.$corDeFundoBotaoDark, $alpha: 0.8);
         border-color: variaveis.$corTextoSecundario;
 
         &:hover {

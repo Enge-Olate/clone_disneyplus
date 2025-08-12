@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const botoes = document.querySelectorAll('[data-tab-button]');
+    const questions = document.querySelectorAll('[data-tab-question');
+
 
     for(let i= 0; i < botoes.length; i++){
         botoes[i].addEventListener('click', (botao)=>{
@@ -13,8 +15,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
             
         })
     }
+    for(let i = 0; i < questions.length; i++){
+        questions[i].addEventListener('click', abreOuFechaElemento)
+        
+    }
 
 })
+function abreOuFechaElemento(elemento){
+    const classe = 'faq__questions__item--is-open';
+    console.log(elemento);
+    const elementoPai = elemento.target.parentNode;
+    console.log(elementoPai);
+    elementoPai.classList.toggle(classe);
+}
 
 function removeBotãoAtivo(){
     const botaoAtivo = document.querySelectorAll('[data-tab-button]');

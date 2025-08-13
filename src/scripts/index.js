@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const botoes = document.querySelectorAll('[data-tab-button]');
     const questions = document.querySelectorAll('[data-tab-question');
+    const sectionHero = document.querySelector('.hero');
+    const alturaHero = sectionHero.clientHeight;
+    console.log('altura:',alturaHero);
 
+    window.addEventListener('scroll',function (){
+        let posicaoAtual = window.scrollY;
+        let showHeader = document.querySelector('header');
+        console.log('posição atual',posicaoAtual);
+        if(posicaoAtual < alturaHero){
+            console.log('aconteceu');
+            showHeader.classList.add('header--is-hidden');
+        }else{
+            showHeader.classList.remove('header--is-hidden');
+        }
+    })  
 
     for(let i= 0; i < botoes.length; i++){
         botoes[i].addEventListener('click', (botao)=>{
@@ -21,6 +35,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
 })
+
+
+
 function abreOuFechaElemento(elemento){
     const classe = 'faq__questions__item--is-open';
     console.log(elemento);

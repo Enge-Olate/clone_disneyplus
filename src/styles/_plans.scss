@@ -5,6 +5,13 @@
 
 .plans{
     padding: 5.6vw;
+    @media(width:740px){
+        display: flex;
+        flex-direction: column;
+        p{
+            margin-top:20px;
+        }
+    }
     h2{
         text-align: center;
     }
@@ -12,7 +19,11 @@
         display: flex;
         justify-content: space-between;
         margin-top: 50px;
-
+        @media (max-width: 768px) {
+            display: block;
+            margin:0 auto;
+            
+        }
         .button{
             margin-top: 24px;
         }
